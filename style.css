@@ -5,23 +5,19 @@
     margin: 0;
     padding: 0;
 }
-
+hitam {
+  color: #000;
+}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #ffffff;
-    background-image: url('bg1.png');
+    background: #000;
     background-size: cover;
     background-position: 0px 100px;
 }
 judul {
   font-size: 20px;
-}
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
 }
 
 main {
@@ -34,7 +30,7 @@ main {
 section {
     background-image: url('bg2.png');
     background-size: cover;
-    background-position: 0px 400px;
+    background-position: 0px 430px;
     padding: 1em;
     margin-bottom: 20px;
 }
@@ -52,7 +48,7 @@ footer {
     right: 0px;
     left: 0px;
     color: #fff;
-    border: 3px Double #fff;
+    border: 1px Groove #333;
     padding: 0px 100px;
     text-align: center;
     clear: both;
@@ -128,19 +124,15 @@ a {
   text-decoration: none;
   color: #fff;
 }
+li {
+  color: #000;
+}
+/* Button Tombol */
 .tiktok {
   background-color: #000;
   color: #fff;
   padding: 0px 125px;
   border: 4px Double;
-  border-radius: 100px;
-  cursor: pointer;
-}
-.yt {
-  background-color: #fa0000;
-  color: #fff;
-  padding: 0px 125px;
-  border: 4px Double #000;
   border-radius: 100px;
   cursor: pointer;
 }
@@ -152,7 +144,6 @@ a {
  border-radius: 100px;
  cursor: pointer;
 }
-
 .tombol-fb {
   background-color: #0000FF;
  color: #fff;
@@ -181,24 +172,7 @@ a {
 biop {
   color: #2fff3e;
 }
-sos {
-  padding: 0px 90px;
-  color: #2fffce;
-}
-sw {
-  font-size: 20px;
-  padding: 0px 90px;
-  animation: ssw 2s infinite;
-}
-@keyframes ssw {
-  0% { color: ##a2c4a0;}
-  30% { color: ##ff9595;}
-  50% { color: #41ffe9;}
-  70% { color: #e9ff41;}
-  80% { color: ##95feff;}
-  100% { color: #ffffff;}
-}
 sd {
   font-size: 20px;
   padding: 1em 0px;
-}
+    }
