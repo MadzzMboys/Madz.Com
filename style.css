@@ -1,0 +1,178 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+hitam {
+  color: #000;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: #000;
+    background-size: cover;
+    background-position: 0px 100px;
+}
+judul {
+  font-size: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-image: url('bg2.png');
+    background-size: cover;
+    background-position: 0px 430px;
+    padding: 1em;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #333;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    color: #fff;
+    border: 1px Groove #333;
+    padding: 0px 100px;
+    text-align: center;
+    clear: both;
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        margin-right: 0;
+    }
+    main {
+        padding: 1em;
+    }
+    section {
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 0.5em;
+    }
+    main {
+        padding: 0.5em;
+    }
+    section {
+        padding: 0.5em;
+    }
+}
+tx {
+  padding: 0px 123px;
+  font-family: bold;
+  border: 5px Double;
+  border-radius: 100px;
+  background: #002798;
+  animation: hd 2s infinite;
+}
+@keyframes hd {
+  0% { color: #ff3636;}
+  30% { color: #8fff41;}
+  50% { color: #41ffe9;}
+  70% { color: #e9ff41;}
+  80% { color: #ff3bf3;}
+  100% { color: #ffffff;}
+}
+p {
+  font-size: 20px;
+}
+.profil img {
+  width: 100px;
+  height: 100px;
+  left: 0px;
+  right: 50px;
+  border: 5px double;
+  border-color: #fff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+namep {
+  font-size: 20px;
+  font-family: Arial;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+li {
+  color: #000;
+}
+/* Button Tombol */
+.tiktok {
+  background-color: #000;
+  color: #fff;
+  padding: 0px 125px;
+  border: 4px Double;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.tombol-tiktok {
+  background-color: #000000;
+ color: #000;
+ padding: 10px 135px;
+ border: Groove;
+ border-radius: 100px;
+ cursor: pointer;
+}
+.tombol-fb {
+  background-color: #0000FF;
+ color: #fff;
+ padding: 10px 120px;
+  border: Groove;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.tombol-yt {
+  background-color: #CC0000;
+  color: #fff;
+  padding: 10px 125px;
+  border: Groove;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.stw {
+  background-color: #307e00;
+  color: #fff;
+  padding: 10px 125px;
+  border: Groove;
+  border-radius: 100px;
+  cursor: pointer;
+}
+biop {
+  color: #2fff3e;
+}
+sd {
+  font-size: 20px;
+  padding: 1em 0px;
+}
