@@ -2,179 +2,190 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Excode Madzz | Bio</title>
-  <link rel="icon" href="exc.png" sizes="128x128">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="mb.png" sizes="128x128">
+  <title>Excode Dashboard</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #63dcff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      padding: 20px;
-      position: relative;
-    }
-
-    .exit-button {
-      position: absolute;
-      top: 5vw;
-      right: 5vw;
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid #ff4d4d;
-      color: #ff4d4d;
-      padding: 0.6em 1em;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-      box-shadow: 0 4px 10px rgba(255, 77, 77, 0.3);
-      font-size: clamp(14px, 3.5vw, 18px);
-      user-select: none;
-      outline: none;
-
-      /* Tambahan */
-      -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
-      -webkit-user-select: none;
-      user-select: none;
-    }
-
-    .exit-button:hover {
-      background: #ff4d4d;
       color: white;
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(255, 77, 77, 0.4);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
-    .exit-button:active {
-      transform: scale(0.95);
-      box-shadow: 0 3px 8px rgba(255, 77, 77, 0.2);
-    }
-
-    .card {
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 15px 20px;
       background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 40px 30px;
-      text-align: center;
-      max-width: 380px;
-      width: 100%;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .profile-pic {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: url('exc.png');
-      background-size: cover;
-      background-position: center;
-      border: 4px solid #00ffe0;
-      margin: 0 auto 25px;
-      box-shadow: 0 0 20px #00ffe08a;
-    }
-
-    h1 {
-      font-size: 30px;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-    }
-
-    .bio {
-      font-size: 15px;
-      color: #32e300;
-      margin-bottom: 30px;
-      font-style: italic;
-    }
-
-    .buttons button {
+    .logo-container {
       display: flex;
       align-items: center;
-      justify-content: center;
-      background: #00ffe0;
-      color: #0e0e10;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 30px;
+      gap: 12px;
+    }
+
+    .logo-container img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo-container span {
+      font-size: 1.2rem;
       font-weight: bold;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 255, 224, 0.3);
-      user-select: none;
-      cursor: pointer;
-      font-size: 16px;
+      color: #00ffc8;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #ff0047, #2bff88, #00c3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: colorCycle 5s linear infinite;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 700px;
+      color: #cfd8dc;
+      margin-bottom: 40px;
+    }
+
+    .bio-button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ff0080, #7928ca, #2afadf);
+      background-size: 300% 300%;
       border: none;
-      width: 100%;
+      border-radius: 40px;
+      color: white;
+      cursor: pointer;
+      animation: gradientShift 6s ease infinite, glow 3s ease-in-out infinite;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
       outline: none;
-
-      /* Tambahan */
-      -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
-      -webkit-user-select: none;
       user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .top {
+      padding: 10px 20px;
+      position: fixed;
+      left: 0px;
+      font-size: 17px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #2a00f0, #ce0000, #dd8d00);
+      background-size: 100% 100%;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    .buttons button:hover {
+    .bio-button:hover {
       transform: scale(1.05);
-      background: #00f7d3;
-      box-shadow: 0 8px 20px rgba(0, 255, 224, 0.4);
     }
 
-    .buttons button:active {
+    .bio-button:active {
       transform: scale(0.95);
-      box-shadow: 0 4px 10px rgba(0, 255, 224, 0.2);
+      box-shadow: 0 0 10px #ff0080, 0 0 20px #2afadf inset;
+    }
+    .top:active {
+      transform: scale(0.95);
     }
 
-    .buttons button i {
-      margin-right: 10px;
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 10px #2afadf, 0 0 20px #ff0080; }
+      50% { box-shadow: 0 0 20px #7928ca, 0 0 30px #2afadf; }
+    }
+
+    @keyframes colorCycle {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 600px) {
+      .content h1 {
+        font-size: 2rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+
+      .bio-button {
+        font-size: 0.9rem;
+        padding: 10px 25px;
+      }
+
+      .logo-container span {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <button class="exit-button" onclick="exit()">
-    <i class="fas fa-sign-out-alt"></i> Beranda
-  </button>
-
-  <div class="card">
-    <div class="profile-pic"></div>
-    <h1>Madzz Excode</h1>
-    <p class="bio">Follow Social Media Excode, & Gabung Di saluran WhatsApp</p>
-    <div class="buttons">
-      <button onclick="window.open('https://www.youtube.com/@MadzExcode', '_blank')">
-        <i class="fab fa-youtube"></i> YouTube
-      </button>
-      <button onclick="window.open('https://discord.gg/w5Ahzeff7Z', '_blank')">
-        <i class="fab fa-discord"></i> Discord
-      </button>
-      <button onclick="window.open('https://tiktok.com/@madzexcode', '_blank')">
-        <i class="fab fa-tiktok"></i> TikTok
-      </button>
-      <button onclick="window.open('https://whatsapp.com/channel/0029VbAYhBh4CrfqJ1E0z93C')">
-        <i class="fab fa-whatsapp"></i> Saluran WhatsApp
-      </button>
+  <header>
+    <button onclick="window.open('https://madz-store.vercel.app'), _blank" class="top">Excode Store</button>
+    <div class="logo-container">
+      <span>Madz Excode</span>
+      <img src="exc.png" alt="profil">
     </div>
-  </div>
-</body>
-<script>
-  function exit(){
-    if(confirm('Apakah Anda Yakin Untuk Kembali Ke Beranda?.')){
-    window.location.href='https://madzz.vercel.app'} else{
-      alert('Anda Memutuskan Untuk Tidak Beralih Ke Beranda.')
+  </header>
+
+  <main class="content">
+    <h1>Welcome Everyone</h1>
+    <p>
+      Bagi Yang Mau order Pembuatan Website, Pembuatan Discord Server, Bisa Klik Tombol Excode Store, Support Madz Excode, Dengan Cara Buka Tombol Bio Profil & Follow Social Media Madz Excode.
+    </p>
+    <button class="bio-button" onclick="bio()">Bio Profil</button>
+  </main>
+
+  <script>
+    function bio() {
+      window.location.href='https://madzbio.vercel.app'
+    console.log("Dashboard Madzz aktif");
     }
-  }
-</script>
+  </script>
+</body>
 </html>
